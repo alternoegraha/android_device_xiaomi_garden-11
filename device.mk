@@ -33,8 +33,9 @@ PRODUCT_PACKAGES += \
     libaptX_encoder \
     libaptXHD_encoder
 
-# GcamGo
+# Prebuilt Apps
 PRODUCT_PACKAGES += \
+    GBoard \
     GoogleCameraGo
 
 # Soong namespaces

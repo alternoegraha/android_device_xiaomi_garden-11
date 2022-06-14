@@ -1,0 +1,12 @@
+android_app_import {
+    name: "GBoard",
+    overrides: [
+        "LatinIME",
+    ],
+    dex_preopt: {
+        enabled: false,
+    },
+    apk: "GBoard.apk",
+    presigned: true,
+    privileged: true,
+}
