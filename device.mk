@@ -33,6 +33,14 @@ PRODUCT_PACKAGES += \
     libaptX_encoder \
     libaptXHD_encoder
 
+# Lawnchair
+PRODUCT_PACKAGES += \
+    Lawnchair
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-lawnchair.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-lawnchair.xml \
+    $(LOCAL_PATH)/configs/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
+
 # Prebuilt Apps
 PRODUCT_PACKAGES += \
     GBoard \

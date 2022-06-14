@@ -1,0 +1,15 @@
+android_app_import {
+    name: "Lawnchair",
+    overrides: [
+        "Home",
+        "Launcher2",
+        "Launcher3",
+        "Launcher3QuickStep",
+    ],
+    dex_preopt: {
+        enabled: false,
+    },
+    apk: "Lawnchair.apk",
+    presigned: true,
+    privileged: true,
+}
