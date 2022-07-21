@@ -160,6 +160,9 @@ persist.sys.sf.disable_blurs=1
 ro.sf.blurs_are_expensive=1
 
 # Memory Management
+ro.vendor.qti.sys.fw.bg_apps_limit=600
+ro.vendor.qti.sys.fw.bservice_limit=60
+persist.vendor.sys.memplus.enable=false
 ro.config.hw_fast_dormancy=1
 ro.sys.fw.bg_apps_limit=0
 ro.HOME_APP_ADJ=1
@@ -234,22 +237,26 @@ ro.config.disable.hw_accel=false
 hw3d.force=1
 
 # Touch improvements
-touch.pressure.scale=0.001 
-persist.sys.ui.hw=1 
-touch.size.calibration=diameter 
-touch.size.scale=1 
-touch.size.bias=0 
-touch.size.isSummed=0 
-touch.pressure.scale=0.001 
-touch.orientation.calibration=none 
-touch.distance.calibration=none 
-touch.distance.scale=0 
-touch.coverage.calibration=box 
-touch.gestureMode=spots 
-MultitouchSettleInterval=1ms 
-MultitouchMinDistance=1px 
-TapInterval=1ms 
-TapSlop=1px
+device.internal=1
+touch.deviceType=touchScreen
+touch.orientationAware=1
+touch.filter.level=0
+touch.size.calibration=diameter
+touch.size.scale=5
+touch.size.bias=5
+touch.size.isSummed=0
+touch.gestureMode=pointer
+touch.pressure.calibration=physical
+touch.pressure.scale=0.00000125
+touch.distance.calibration=none
+touch.distance.scale=0
+touch.gestureMode=spots
+MultitouchSettleInterval=0.1ms
+MultitouchMinDistance=0.5 px
+TapInterval=0.5 ms
+TapSlop=0.5 px
+touch.orientation.calibration=none
+touch.coverage.calibration=box
 
 # Blurs
 ro.surface_flinger.supports_background_blur=1
@@ -387,3 +394,27 @@ ro.sys.fw.trim_enable_memory=2147483648
 
 # Android GO prop
 ro.config.low_ram=true
+
+# Cpu Threading
+persist.sys.dalvik.hyperthreading=true
+persist.sys.dalvik.multithread=true
+
+# Smoothess UI
+persist.service.lgospd.enable=0
+persist.service.pcsync.enable=0
+ro.ril.enable.a52=1
+ro.ril.enable.a53=0
+
+# GPU Render
+debug.composition.type=skiagl
+debug.hwui.renderer=skiagl
+
+# OpenGLES version
+#196608 is decimal for 0x30000 to report major/minor versions as 3/0
+#196609 is decimal for 0x30001 to report major/minor versions as 3/1
+#196610 is decimal for 0x30002 to report major/minor versions as 3/2
+ro.opengles.version=196608
+
+# Disable Dyn Fps 
+ro.vendor.dfps.enable=false
+ro.vendor.smart_dfps.enable=false
